@@ -147,33 +147,7 @@
 									</div>
 								</div>
 							</div>
-							<!-- <div class="product__section">
-								<div class="product__section-header">
-									<h4 class="product__section__title">NÂNG CAO</h4>
-									<span></span><i class="fas fa-chevron-right"></i>
-								</div>
-								<div class="product__wraper">
-									<div class="product__checkbox-group">
-										<input type="checkbox" name="nangCao" id="maGiamGia"
-											value="maGiamGia" /> <label for="maGiamGia">Mã giảm
-											giá</label>
-									</div>
-									<div class="product__checkbox-group">
-											value="khuyenmai" /> <label for="khuyenmai">Khuyến
-											Mại</label>
-									</div>
-									<div class="product__checkbox-group">
-										<input type="checkbox" name="nangCao" id="bannhieunhat"
-											value="bannhieunhat" /> <label for="bannhieunhat">
-											Bán Nhiều Nhất</label>
-									</div>
-									<div class="product__checkbox-group">
-										<input type="checkbox" name="nangCao" id="sanphanmoi"
-											value="sanphanmoi" /> <label for="sanphanmoi"> Sản
-											phẩm mới</label>
-									</div>
-								</div>
-							</div> -->
+
 							<div class="product__border"></div>
 							<div class="product__action">
 								<button class="product__btn">Áp dụng</button>
@@ -253,13 +227,6 @@
 								<div class="product__pages" style="width: 100%">
 									<div class="col-12 pb-1">
 										<nav aria-label="Page navigation example">
-											<%-- 	<ul class="float-left">
-												<c:if test="${productPages.size()>0}">
-													<div class="pagination justify-content-center mb-3">
-														Showing ${number+1 } to ${size } of ${totalElements}
-														Products</div>
-												</c:if>
-											</ul> --%>
 											<ul class="pagination  float-right">
 												<c:if test="${number > 0 }">
 													<li class="page-item " style="width: 90px;"><a

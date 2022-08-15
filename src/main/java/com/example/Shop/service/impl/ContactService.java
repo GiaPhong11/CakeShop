@@ -10,9 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.example.Shop.Controller.dto.SimpleContact;
-import com.example.Shop.entities.ContactEntity;
-import com.example.Shop.entities.ProductsEntity;
+import com.example.Shop.entity.ContactEntity;
 import com.example.Shop.repository.ContactRepository;
 import com.example.Shop.service.IContactService;
 

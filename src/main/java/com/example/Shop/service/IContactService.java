@@ -8,8 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
-import com.example.Shop.entities.ContactEntity;
-import com.example.Shop.entities.ProductsEntity;
+import com.example.Shop.entity.ContactEntity;
 
 public interface IContactService {
 

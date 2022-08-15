@@ -11,9 +11,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.query.FluentQuery.FetchableFluentQuery;
 import org.springframework.stereotype.Service;
 
-import com.example.Shop.Controller.dto.Constant;
-import com.example.Shop.entities.ProductsEntity;
-import com.example.Shop.entities.ProductsImagesEntity;
+import com.example.Shop.controller.dto.Constant;
+import com.example.Shop.entity.ProductsImagesEntity;
 import com.example.Shop.repository.ProductImageRepository;
 import com.example.Shop.service.IProductsImagesService;
 

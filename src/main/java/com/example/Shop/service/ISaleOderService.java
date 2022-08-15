@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.example.Shop.entities.SaleOrderEntity;
+import com.example.Shop.entity.SaleOrderEntity;
 
 
 public interface ISaleOderService {

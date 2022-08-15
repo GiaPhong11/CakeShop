@@ -10,8 +10,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.example.Shop.Controller.dto.Constant;
-import com.example.Shop.entities.CategoryEntity;
+import com.example.Shop.controller.dto.Constant;
+import com.example.Shop.entity.CategoryEntity;
 import com.example.Shop.repository.CategoryRepository;
 import com.example.Shop.service.ICategoryService;
 

@@ -9,7 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.example.Shop.entities.ProductsEntity;
+import com.example.Shop.entity.ProductsEntity;
 
 public interface IProductService {
 	

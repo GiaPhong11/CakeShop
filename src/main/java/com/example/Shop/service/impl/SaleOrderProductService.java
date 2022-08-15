@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.Shop.entities.SaleOrderProductsEntity;
+import com.example.Shop.entity.SaleOrderProductsEntity;
 import com.example.Shop.repository.SaleOrderProductReponsitory;
 import com.example.Shop.service.ISaleOrderProductService;
 

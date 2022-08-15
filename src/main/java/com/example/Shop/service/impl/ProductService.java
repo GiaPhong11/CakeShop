@@ -12,9 +12,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.example.Shop.Controller.dto.Constant;
-import com.example.Shop.entities.ProductsEntity;
-import com.example.Shop.entities.ProductsImagesEntity;
+import com.example.Shop.controller.dto.Constant;
+import com.example.Shop.entity.ProductsEntity;
+import com.example.Shop.entity.ProductsImagesEntity;
 import com.example.Shop.repository.ProductRepository;
 import com.example.Shop.service.IProductService;
 

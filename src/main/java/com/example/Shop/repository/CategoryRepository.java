@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.example.Shop.entities.CategoryEntity;
+import com.example.Shop.entity.CategoryEntity;
 
 
 @Repository

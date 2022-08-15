@@ -8,7 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
-import com.example.Shop.entities.CategoryEntity;
+import com.example.Shop.entity.CategoryEntity;
 
 public interface ICategoryService {
 

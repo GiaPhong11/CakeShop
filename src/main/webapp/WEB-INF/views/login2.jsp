@@ -94,19 +94,19 @@
 	<div class="header__user1" style="padding: 0 400px;">
 		<div class="user__box">
 			<p class="user--active user__action">Đăng nhập</p>
-			<p class="user__action"><a href="${base }/register">Đăng ký</a></p>
+			<p class="user__action"><a style="color: black" href="${base }/register">Đăng ký</a></p>
 		</div>
 		<form class="user__form" method="POST" action="/perform_login" data-number="0"
 			id="user__signin">
 			<div class="group-input">
 				<input type="text" placeholder="User name" id="username"
 					name="username" />
-				
+
 			</div>
 			<div class="group-input group-last">
 				<input type="password" placeholder="Password" id="password"
 					name="password" />
-				
+
 			</div>
 			<a class="user__form__box" href="#"><i
 				class="far fa-question-circle"></i>

@@ -14,6 +14,9 @@ import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,13 +29,17 @@ public class UserEntity extends BaseEntity implements UserDetails{
 	 * 
 	 */
 	private static final long serialVersionUID = -5409485970279961028L;
-
+	@NotEmpty(message = "Không được để trống!")
+	@Pattern(regexp = "^[a-zA-z]{2,30}$",message = "Ten chua ki tu a-z va A-z")
 	@Column(name = "username", length = 45, nullable = false)
 	private String username;
-	
+	@NotEmpty(message = "Không được để trống!")
+	@Pattern(regexp = "^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!#$%&? \"]).*$",message = "Mật khẩu có ít nhất 1 ký tự hoa và ký tự đặc biệt")
 	@Column(name = "password", length = 100, nullable = false)
 	private String password;
-	
+
+	@NotEmpty
+	@Pattern(regexp = "^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$",message = "Email phải có định dạng abc@gmail.com")
 	@Column(name = "email", length = 45, nullable = false)
 	private String email;
 	

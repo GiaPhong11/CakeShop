@@ -5,6 +5,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -40,7 +41,7 @@
                         </ol>
                         
                         <h3 align="center">Danh sách User</h3>
-                        <form action="${base }/admin/user" method="get">
+                        <sf:form action="${base }/admin/user" method="get" modelAttribute="roleName">
                       	<label>Tìm kiếm người dùng: </label>
                         <input type="text" name="keyword" /> <!-- Keyword lấy theo parameter  -->
                         <button type="submit" class="btn btn-info">Search</button>
@@ -50,12 +51,12 @@
                         	<table class="table table-striped table-dark">
 								  <thead>
 								    <tr>
-								      <th scope="col">ID</th>
-								      <th scope="col">User Name</th>
-								      <th scope="col">Password</th>
-								      <th scope="col">Email</th>
-								      <th scope="col">Role</th>
-								      <th scope="col">Action</th>
+								      <th width="10%" scope="col">ID</th>
+								      <th width="20%" scope="col">User Name</th>
+								      <th width="30%" scope="col">Password</th>
+								      <th width="20%" scope="col">Email</th>
+								      <th width="10%" scope="col">Role</th>
+								      <th width="10%" scope="col">Action</th>
 								    </tr>
 								  </thead>
 								  <c:forEach var="u" items="${listPage.content }" varStatus="loop">
@@ -66,18 +67,14 @@
 								  <tbody>
 								    <tr>
 								      <th scope="row">${u.id }</th>
-								      <td>${u.username }</td>
-								      <td>${u.password }</td>
-								      <td>${u.email }</td>
+								      <td >${u.username }</td>
+								      <td >${u.password }</td>
+								      <td >${u.email }</td>
 								      
 								      	<c:forEach items="${u.roles}" var="r">
-											<td>${r.name }</td>
+											<td name="listRoles">${r.name }</td>
 										</c:forEach>
-								      <td>
-								      	<%-- <a href="${base }/admin/del-category/${category.id}" class="btn btn-danger">Delete</a>
-								      	<a href="${base }/admin/edit-category/${category.id}" class="btn btn-success">Edit</a> --%>
-								      	
-								      	<%-- <a href="${base }/admin/detail-contact/${c.id}" class="btn btn-primary">View Detail<i class="fas fa-eye" style="margin-left: 5px"></i></a> --%>
+								      <td >
 								      	<a href="${base }/admin/edit-user/${u.id}" class="btn btn-success">Edit</a>
 								      	<a href="${base }/admin/delete-user/${u.id}" class="btn btn-danger">Delete</a>
 								      </td>
@@ -86,35 +83,9 @@
 								  </tbody>
 								  </c:forEach>
 								</table>
-                        	
-								<!-- Button trigger modal -->
-<%-- <a href="${base }/admin/detail-contact/${c.id}" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
-  												Launch demo modal
-</a>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-        <p>${contactEntity.firstName }</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        
-      </div>
-    </div>
-  </div>
-</div> --%>
                         </p>
-                        </form>
+                        </sf:form>
                     </div>
                     
                     <!-- Modal -->

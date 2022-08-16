@@ -77,7 +77,19 @@
           </div>
         <!-- </form> -->
     	</div>
-    	
+
+        <div class="col-md-12 ">
+            <!-- <form class="register-form" role="form"> -->
+            <div class="form-group">
+                <label class="info-title" for="exampleInputName">Role <span></span></label><br>
+                <c:forEach items="${userEdit.roles}" var="r">
+                <select name="listRoles">
+                        <option  name="listRoles">${r.name }</option>
+                </select>
+                </c:forEach>
+            </div>
+            <!-- </form> -->
+        </div>
     	<div class="col-md-12 ">
         <!-- <form class="register-form" role="form"> -->
             <div class="form-group">

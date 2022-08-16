@@ -99,23 +99,25 @@ public class ManagerUserController extends BaseController {
 			final @ModelAttribute("userEdit") UserEntity userEdit) throws Exception {
 		// Luu product vao db
 		List<RoleEntity> list = userEdit.getRoles();
+		String listRoles = request.getParameter("listRoles");
+		String username = userEdit.getUsername();
+		String email = userEdit.getEmail();
+		System.out.println("username :" + username + " email: "+email + " role: "+list + " test: "+listRoles + " test2: ");
 		String role2 = request.getParameter("rolee");
 		RoleEntity role = new RoleEntity();
 		role.setName(role2);
-//		for(RoleEntity s : list) {
-//			if(role.getName().equals(s.getName())) {
-//				userService.save(userEdit);
-//			}else {
-//				userEdit.addRoles(role);
-//				userService.save(userEdit);
-//			}
-//		}
 		role.setDescription(role2);
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String encodedPassword = passwordEncoder.encode(userEdit.getPassword());
 		userEdit.setPassword(encodedPassword);
-		userEdit.addRoles(role);
-		userService.save(userEdit);
+		for(RoleEntity s : list) {
+			if(role.getName().equals(s.getName())) {
+				userService.save(userEdit);
+			}else {
+				userEdit.addRoles(role);
+				userService.save(userEdit);
+			}
+		}
 		return "redirect:/admin/user";
 	}
 

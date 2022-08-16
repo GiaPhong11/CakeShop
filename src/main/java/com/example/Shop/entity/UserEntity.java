@@ -34,7 +34,7 @@ public class UserEntity extends BaseEntity implements UserDetails{
 	@Column(name = "username", length = 45, nullable = false)
 	private String username;
 	@NotEmpty(message = "Không được để trống!")
-	@Pattern(regexp = "^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!#$%&? \"]).*$",message = "Mật khẩu có ít nhất 1 ký tự hoa và ký tự đặc biệt")
+	@Pattern(regexp = "^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!#$%&?@ \"]).*$",message = "Mật khẩu có ít nhất 1 ký tự hoa và ký tự đặc biệt")
 	@Column(name = "password", length = 100, nullable = false)
 	private String password;
 

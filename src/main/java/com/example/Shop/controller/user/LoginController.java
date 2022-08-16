@@ -49,9 +49,6 @@ public class LoginController extends BaseController {
                               final HttpServletRequest request,
                               final HttpServletResponse response)
             throws IOException {
-        //b1: lay thong tin nguoi dung day len
-        //	String email = request.getParameter("txtEmail");
-        //	String emailFromSpringForm = contact.getTxtEmail();
         if (result.hasErrors()) {
             System.out.println("False");
             return "register2";
@@ -59,7 +56,7 @@ public class LoginController extends BaseController {
         String username = regis.getUsername();
         String password = regis.getPassword();
         String cfPassword = request.getParameter("cfpassword");
-        if (password.compareTo(cfPassword) != 0) {
+        if (!password.equals(cfPassword)) {
             model.addAttribute("loi", "Mật khẩu và xác thực mật khẩu khác nhau");
             return "register2";
         }
